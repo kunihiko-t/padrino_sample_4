@@ -1,0 +1,9 @@
+---
+:orm: mongoid
+:test: shoulda
+:mock: none
+:script: jquery
+:renderer: haml
+:stylesheet: compass
+:namespace: Sample
+:migration_format: number
