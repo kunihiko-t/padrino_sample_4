@@ -14,6 +14,9 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'compass'
 gem 'haml'
 gem 'mongoid', '~>3.0.0'

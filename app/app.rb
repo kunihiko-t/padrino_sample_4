@@ -1,10 +1,27 @@
 module Sample
   class App < Padrino::Application
+    register OmniauthInitializer
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
     register CompassInitializer
+    register Padrino::Admin::AccessControl
 
+    enable :authentication
+    enable :store_location
+
+    set :admin_model, 'User' # Default => Account
+    set :login_page, "/" # determines the url login occurs
+
+
+    access_control.roles_for :any do |role|
+        role.protect "/home" # here a demo path
+    end
+
+    # now we add a role for users
+    access_control.roles_for :members do |role|
+        role.allow "/home"
+    end
 
     enable :sessions
 
@@ -47,6 +64,15 @@ module Sample
     #     disable :asset_stamp # no asset timestamping for dev
     #   end
     #
+
+    get :auth, :map => '/auth/:provider/callback' do
+      auth = request.env["omniauth.auth"]
+      user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
+      set_current_account(user)
+      redirect url_for(:base,:home)
+    end
+
+    
 
     ##
     # You can manage errors like:
