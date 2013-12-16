@@ -7,6 +7,10 @@ GEM
     activesupport (3.2.15)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    aws-sdk (1.25.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4, < 1.6.0)
+      uuidtools (~> 2.1)
     builder (3.0.4)
     chunky_png (1.2.8)
     compass (0.12.2)
@@ -24,6 +28,7 @@ GEM
       url_mount (~> 0.2.1)
     httpauth (0.2.0)
     i18n (0.6.5)
+    json (1.8.1)
     jwt (0.1.8)
       multi_json (>= 1.5)
     mail (2.5.4)
@@ -38,6 +43,7 @@ GEM
     moped (1.5.1)
     multi_json (1.8.2)
     multipart-post (1.2.0)
+    nokogiri (1.5.10)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -115,11 +121,13 @@ GEM
     tzinfo (0.3.38)
     url_mount (0.2.1)
       rack
+    uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   compass
   haml
   mongoid (~> 3.0.0)
