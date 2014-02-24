@@ -1,0 +1,33 @@
+{
+  "name": "sample",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kunihiko-t/padrino_sample.git"
+  },
+  "author": "Kunihiko Tanaka",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "tmp": "~0.0.23",
+    "grunt-contrib-coffee": "~0.9.0"
+  },
+
+  "bugs": {
+    "url": "https://github.com/kunihiko-t/padrino_sample/issues"
+  },
+  "homepage": "https://github.com/kunihiko-t/padrino_sample"
+}
